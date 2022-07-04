@@ -1,13 +1,9 @@
-/* Copyright (c) 2014 xcsoft.cn(http://www.xcsoft.cn)
- * Author:Xiucheng Yang
- * Version: 4.0
- * MyQQ:549642084
- * LastUpdateTime:2015-11-03
- * Used Url:http://www.xcsoft.cn/article/479.html
- */
+
 if (typeof xcsoft == "undefined") var xcsoft = new
 function() {};
 xcsoft.countdown = function(a, b, c) {
+    var issafariBrowser = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+    a = issafariBrowser ? a.replace(/-/g, '/') : a;
     var d = new Object();
     var e = 0;
     if (typeof a == "object") {
